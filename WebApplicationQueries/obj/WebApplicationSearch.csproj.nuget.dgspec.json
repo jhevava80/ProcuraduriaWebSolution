@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Clone Repositories\\temp\\WebApplicationQueries\\WebApplicationSearch.csproj": {}
+    "C:\\Clone Repositories\\ProcuraduriaWebSolution\\WebApplicationQueries\\WebApplicationSearch.csproj": {}
   },
   "projects": {
-    "C:\\Clone Repositories\\temp\\WebApplicationQueries\\WebApplicationSearch.csproj": {
+    "C:\\Clone Repositories\\ProcuraduriaWebSolution\\WebApplicationQueries\\WebApplicationSearch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Clone Repositories\\temp\\WebApplicationQueries\\WebApplicationSearch.csproj",
+        "projectUniqueName": "C:\\Clone Repositories\\ProcuraduriaWebSolution\\WebApplicationQueries\\WebApplicationSearch.csproj",
         "projectName": "WebApplicationSearch",
-        "projectPath": "C:\\Clone Repositories\\temp\\WebApplicationQueries\\WebApplicationSearch.csproj",
+        "projectPath": "C:\\Clone Repositories\\ProcuraduriaWebSolution\\WebApplicationQueries\\WebApplicationSearch.csproj",
         "packagesPath": "C:\\Users\\jhon.vargas\\.nuget\\packages\\",
-        "outputPath": "C:\\Clone Repositories\\temp\\WebApplicationQueries\\obj\\",
+        "outputPath": "C:\\Clone Repositories\\ProcuraduriaWebSolution\\WebApplicationQueries\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,22 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
