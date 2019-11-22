@@ -6,7 +6,7 @@ namespace WebApplicationSearch.Data
 {
     public interface IRepository
     {
-        void AddProduct(Job job);
+        void AddJob(Job job);
         
         Job GetJob(int id);
         
@@ -14,9 +14,9 @@ namespace WebApplicationSearch.Data
         
         bool JobExists(int id);
         
-        void RemoveProduct(Job job);
+        void RemoveJob(Job job);
         Task<bool> SaveAllAsync();
         
-        void UpdateProduct(Job job);
+        void UpdateJob(Job job);
     }
 }

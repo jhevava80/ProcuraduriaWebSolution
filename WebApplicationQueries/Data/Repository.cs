@@ -24,17 +24,17 @@ namespace WebApplicationSearch.Data
             return this.context.Jobs.Find(id);
         }
 
-        public void AddProduct(Job job)
+        public void AddJob(Job job)
         {
             this.context.Jobs.Add(job);
         }
 
-        public void UpdateProduct(Job job)
+        public void UpdateJob(Job job)
         {
             this.context.Jobs.Update(job);
         }
 
-        public void RemoveProduct(Job job)
+        public void RemoveJob(Job job)
         {
             this.context.Jobs.Remove(job);
         }

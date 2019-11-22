@@ -31,6 +31,14 @@ namespace WebApplicationQueries
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+
+            //Mock repository - for unit test  
+            //services.AddScoped<IRepository, MockRepository>();
+
+            services.AddScoped<IRepository, Repository>();
+
+            
+
             services.AddControllersWithViews();
         }
 
