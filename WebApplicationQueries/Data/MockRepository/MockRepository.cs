@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplicationSearch.Data.Entities;
 
-namespace WebApplicationSearch.Data
+namespace WebApplicationSearch.Data.MockRepository
 {
     public class MockRepository : IRepository
     {

@@ -60,7 +60,6 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.csproj.CopyComplete
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.pdb
-C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.csprojAssemblyReference.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -134,9 +133,12 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\Create.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\Delete.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\Details.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\Edit.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\Index.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.AspNet.Identity.Core.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.csprojAssemblyReference.cache
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache

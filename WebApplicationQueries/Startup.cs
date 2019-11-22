@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApplicationSearch.Data;
+using WebApplicationSearch.Data.Entities;
 
 namespace WebApplicationQueries
 {
@@ -25,6 +27,19 @@ namespace WebApplicationQueries
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //Configuring Identity User
+            services.AddIdentity<User, IdentityRole>(cfg=> {
+                cfg.User.RequireUniqueEmail = true;
+                cfg.Password.RequireDigit = false;
+                cfg.Password.RequiredUniqueChars = 0;
+                cfg.Password.RequireLowercase = false;
+                cfg.Password.RequireNonAlphanumeric = false;
+                cfg.Password.RequireUppercase = false;
+                cfg.Password.RequiredLength = 4;
+            }).AddEntityFrameworkStores<DataContext>();
+
+
             //Injects datacontext
             services.AddDbContext<DataContext>(cfg =>
             {
@@ -34,7 +49,8 @@ namespace WebApplicationQueries
 
             //Mock repository - for unit test  
             //services.AddScoped<IRepository, MockRepository>();
-
+            
+            //Production 
             services.AddScoped<IRepository, Repository>();
 
             
@@ -57,6 +73,9 @@ namespace WebApplicationQueries
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            //Riquerie Athentication
+            app.UseAuthentication();
 
             app.UseRouting();
 

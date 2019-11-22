@@ -20,5 +20,7 @@ namespace WebApplicationSearch.Data.Entities
 
         [Display(Name = "State")]
         public bool State { get; set; }
+
+        public User User { get; set; }
     }
 }
