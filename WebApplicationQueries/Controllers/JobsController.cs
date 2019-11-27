@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplicationSearch.Data;
 using WebApplicationSearch.Data.Entities;
+using WebApplicationSearch.Helpers;
 
 namespace WebApplicationSearch.Controllers
 {
+    [Authorize]
     public class JobsController : Controller
     {
-        private readonly IRepository repository;
+        private readonly IJobRepository jobRepository;
+        private readonly IUserHelper userHelper;
 
-        public JobsController(IRepository repository)
+        public JobsController(IJobRepository jobRepository, IUserHelper userHelper)
         {
-            this.repository = repository;
+            this.jobRepository = jobRepository;
+            this.userHelper = userHelper;
         }
 
         // GET: Jobs
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(this.repository.GetJobs());
+            return View(this.jobRepository.GetAll().OrderBy(j => j.Name));
         }
 
         // GET: Jobs/Details/5
@@ -33,8 +38,8 @@ namespace WebApplicationSearch.Controllers
                 return NotFound();
             }
 
-            var job = this.repository.GetJob(id.Value);
-            if (job == null)
+            var job = this.jobRepository.GetByIdAsync(id.Value);
+            if (job == null )
             {
                 return NotFound();
             }
@@ -55,8 +60,8 @@ namespace WebApplicationSearch.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.repository.AddJob(job);
-                await this.repository.SaveAllAsync();
+                //TODO: Miss to include the logged user
+                await this.jobRepository.CreateAsync(job);
                 return RedirectToAction(nameof(Index));
             }
             return View(job);
@@ -70,7 +75,7 @@ namespace WebApplicationSearch.Controllers
                 return NotFound();
             }
 
-            var job = this.repository.GetJob(id.Value);
+            var job = this.jobRepository.GetByIdAsync(id.Value);
             if (job == null)
             {
                 return NotFound();
@@ -92,12 +97,11 @@ namespace WebApplicationSearch.Controllers
             {
                 try
                 {
-                    this.repository.UpdateJob(job);
-                    await this.repository.SaveAllAsync();
+                    await this.jobRepository.UpdateAsync(job);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!JobExists(job.Id))
+                    if (! await JobExists(job.Id))
                     {
                         return NotFound();
                     }
@@ -119,7 +123,7 @@ namespace WebApplicationSearch.Controllers
                 return NotFound();
             }
 
-            var job = this.repository.GetJob(id.Value);
+            var job = this.jobRepository.GetByIdAsync(id.Value);
             if (job == null)
             {
                 return NotFound();
@@ -133,14 +137,14 @@ namespace WebApplicationSearch.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var job = this.repository.GetJob(id);
-            await this.repository.SaveAllAsync();
+            var job = this.jobRepository.GetByIdAsync(id);
+            //await this.jobRepository.DeleteAsync(job);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool JobExists(int id)
+        private async Task<bool> JobExists(int id)
         {
-            return this.repository.JobExists(id);
+            return await this.jobRepository.ExistAsync(id);
         }
     }
 }

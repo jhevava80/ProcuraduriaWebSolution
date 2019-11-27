@@ -6,7 +6,7 @@ using WebApplicationSearch.Data.Entities;
 
 namespace WebApplicationSearch.Data.MockRepository
 {
-    public class MockRepository : IRepository
+    public class MockRepository
     {
         public void AddJob(Job job)
         {

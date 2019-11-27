@@ -168,17 +168,46 @@ namespace WebApplicationSearch.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
-                    b.Property<bool>("State")
-                        .HasColumnType("bit");
+                    b.Property<int?>("StatusId")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("StatusId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Jobs");
+                });
+
+            modelBuilder.Entity("WebApplicationSearch.Data.Entities.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("WebApplicationSearch.Data.Entities.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Statuses");
                 });
 
             modelBuilder.Entity("WebApplicationSearch.Data.Entities.User", b =>
@@ -305,6 +334,10 @@ namespace WebApplicationSearch.Migrations
 
             modelBuilder.Entity("WebApplicationSearch.Data.Entities.Job", b =>
                 {
+                    b.HasOne("WebApplicationSearch.Data.Entities.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId");
+
                     b.HasOne("WebApplicationSearch.Data.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");

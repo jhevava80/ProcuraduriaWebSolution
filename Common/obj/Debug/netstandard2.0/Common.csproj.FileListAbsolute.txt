@@ -1,0 +1,8 @@
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\bin\Debug\netstandard2.0\Common.deps.json
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\bin\Debug\netstandard2.0\Common.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\bin\Debug\netstandard2.0\Common.pdb
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\obj\Debug\netstandard2.0\Common.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\Common\obj\Debug\netstandard2.0\Common.pdb

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationSearch.Data.Entities
 {
-    public class Job
+    public class Job : IEntity
     {
         public int Id { get; set; }
 
@@ -18,8 +18,7 @@ namespace WebApplicationSearch.Data.Entities
         [Display(Name = "Modified Date")]
         public DateTime? ModifiedDate { get; set; }
 
-        [Display(Name = "State")]
-        public bool State { get; set; }
+        public Status Status { get; set; }
 
         public User User { get; set; }
     }

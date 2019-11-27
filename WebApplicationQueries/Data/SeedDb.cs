@@ -33,8 +33,7 @@ namespace WebApplicationSearch.Data
             this.context.Jobs.Add(new Job { 
                 Name = name + "-" + num,
                 CreatedDate = DateTime.Now,
-                ModifiedDate = DateTime.Now,
-                State = false
+                ModifiedDate = DateTime.Now
             });
         }
     }

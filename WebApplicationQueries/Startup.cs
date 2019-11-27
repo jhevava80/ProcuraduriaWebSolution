@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApplicationSearch.Data;
 using WebApplicationSearch.Data.Entities;
+using WebApplicationSearch.Helpers;
 
 namespace WebApplicationQueries
 {
@@ -50,10 +51,12 @@ namespace WebApplicationQueries
             //Mock repository - for unit test  
             //services.AddScoped<IRepository, MockRepository>();
             
-            //Production 
-            services.AddScoped<IRepository, Repository>();
+            //Inject the repository class to Production 
+            services.AddScoped<IJobRepository, JobRepository>();
+            services.AddScoped<IStatusRepository, StatusRepository>();
 
-            
+            //Inject userhelper
+            services.AddScoped<IUserHelper, UserHelper>();
 
             services.AddControllersWithViews();
         }
