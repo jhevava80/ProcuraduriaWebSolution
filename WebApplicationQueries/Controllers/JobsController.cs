@@ -48,6 +48,7 @@ namespace WebApplicationSearch.Controllers
         }
 
         // GET: Jobs/Create
+        [Authorize(Roles = "Admin,Root,Super")]
         public IActionResult Create()
         {
             return View();
@@ -60,7 +61,7 @@ namespace WebApplicationSearch.Controllers
         {
             if (ModelState.IsValid)
             {
-                //TODO: Miss to include the logged user
+                job.User = await this.userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await this.jobRepository.CreateAsync(job);
                 return RedirectToAction(nameof(Index));
             }

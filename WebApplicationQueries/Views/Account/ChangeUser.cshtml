@@ -1,0 +1,43 @@
+﻿@model WebApplicationSearch.Models.ChangeUserViewModel
+
+@{
+    ViewData["Title"] = "Register new user";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Change user</h2>
+
+<div class="row">
+    <div class="col-md-4 offset-2">
+        <h4>Input the new user.</h4>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="FirstName">FirstName</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName">LastName</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-warning"></span>
+            </div>            
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Save" />
+                <a asp-action="ChangePassword" asp-controller="Account" class="btn btn-warning">Change Password</a>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Go back Home</a>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>@ViewBag.UserMessage</strong>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

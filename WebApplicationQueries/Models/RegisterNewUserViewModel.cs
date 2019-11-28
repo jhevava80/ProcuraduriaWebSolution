@@ -18,7 +18,7 @@ namespace WebApplicationSearch.Models
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        public bool Username { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [MinLength(4)]

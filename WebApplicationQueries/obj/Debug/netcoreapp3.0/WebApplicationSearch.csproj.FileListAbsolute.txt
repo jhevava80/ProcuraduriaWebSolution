@@ -115,7 +115,6 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\staticwebassets\WebApplicationSearch.StaticWebAssets.Manifest.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\staticwebassets\WebApplicationSearch.StaticWebAssets.xml
-C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.RazorAssemblyInfo.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.RazorAssemblyInfo.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.AssemblyInfoInputs.cache
@@ -145,3 +144,13 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\_AnotherServiceLogin.cshtml.g.cs
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\ChangeUser.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\ChangePassword.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache
