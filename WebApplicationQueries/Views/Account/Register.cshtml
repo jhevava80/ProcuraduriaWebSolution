@@ -8,7 +8,7 @@
 <h2>Register new user!</h2>
 
 <div class="row">
-    <div class="col-md-4 offset-2">
+    <div class="col-md-5 offset-1">
         <h4>Input the new user.</h4>
         <form method="post">
             <div asp-validation-summary="ModelOnly"></div>
@@ -38,8 +38,8 @@
                 <span asp-validation-for="Confirm" class="text-warning"></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Register New User" />
-                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Go back Home</a>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Register New User</button>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-info"><i class="fa fa-chevron-left"></i> Go back Home</a>
             </div>
         </form>
     </div>
@@ -47,8 +47,6 @@
         <partial name="_AnotherServiceLogin" />
     </div>
 </div>
-
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

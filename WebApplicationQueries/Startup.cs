@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -75,6 +76,21 @@ namespace WebApplicationQueries
 
             //Inject userhelper
             services.AddScoped<IUserHelper, UserHelper>();
+
+            //Cookies policy
+            services.Configure<CookiePolicyOptions>(options => 
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            //Pages Redirect
+            services.ConfigureApplicationCookie(options => 
+            {
+                options.LoginPath = "/Account/NotAuthorized";
+                options.AccessDeniedPath = "/Account/NotAuthorized";
+            });
+
 
             services.AddControllersWithViews();
         }

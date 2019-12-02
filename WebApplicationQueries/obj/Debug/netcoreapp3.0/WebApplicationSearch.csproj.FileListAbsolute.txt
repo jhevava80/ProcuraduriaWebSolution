@@ -154,3 +154,4 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\package.json

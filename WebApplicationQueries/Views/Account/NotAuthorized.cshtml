@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "NotAuthorized";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2>Tou are not authorized to perform this action!</h2>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

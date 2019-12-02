@@ -44,10 +44,6 @@ namespace WebApplicationSearch.Controllers
                 var result = await this.userHelper.LoginAsync(model);
                 if (result.Succeeded)
                 {
-                   
-
-
-
                     //Si tiene direccion de retorno va a ella
                     if (this.Request.Query.Keys.Contains("ReturnUrl"))
                     {
@@ -212,6 +208,11 @@ namespace WebApplicationSearch.Controllers
                 }
             }
             return this.BadRequest();
+        }
+
+        public IActionResult NotAuthorized()
+        {
+            return this.View();
         }
     }
 }
