@@ -155,3 +155,6 @@ C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\ne
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\WebApplicationSearch.MvcApplicationPartsAssemblyInfo.cache
 C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\bin\Debug\netcoreapp3.0\package.json
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Account\NotAuthorized.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Jobs\JobNotFound.cshtml.g.cs
+C:\Clone Repositories\ProcuraduriaWebSolution\WebApplicationQueries\obj\Debug\netcoreapp3.0\Razor\Views\Home\Error404.cshtml.g.cs

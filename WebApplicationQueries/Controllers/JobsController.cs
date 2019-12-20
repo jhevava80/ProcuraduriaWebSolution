@@ -35,13 +35,14 @@ namespace WebApplicationSearch.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
+               // return NotFound();
             }
 
             var job = this.jobRepository.GetByIdAsync(id.Value);
             if (job == null )
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
 
             return View(job);
@@ -73,13 +74,13 @@ namespace WebApplicationSearch.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
 
             var job = this.jobRepository.GetByIdAsync(id.Value);
             if (job == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
             return View(job);
         }
@@ -91,7 +92,7 @@ namespace WebApplicationSearch.Controllers
         {
             if (id != job.Id)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
 
             if (ModelState.IsValid)
@@ -104,7 +105,7 @@ namespace WebApplicationSearch.Controllers
                 {
                     if (! await JobExists(job.Id))
                     {
-                        return NotFound();
+                        return new NotFoundViewResult("JobNotFound");
                     }
                     else
                     {
@@ -121,13 +122,13 @@ namespace WebApplicationSearch.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
 
             var job = this.jobRepository.GetByIdAsync(id.Value);
             if (job == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("JobNotFound");
             }
 
             return View(job);
@@ -141,6 +142,12 @@ namespace WebApplicationSearch.Controllers
             var job = this.jobRepository.GetByIdAsync(id);
             //await this.jobRepository.DeleteAsync(job);
             return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult JobNotFound()
+        {
+            return this.View();
         }
 
         private async Task<bool> JobExists(int id)

@@ -5,9 +5,16 @@
 }
 
 
+    <div class="row">
+        <div class="col-md-4 offset-2">
+            <div class="alert alert-dismissible alert-warning text-black-50">
+                <h4 class="alert-heading">You are not authorized to perform this action!</h4>
+                <p class="mb-0">Usted no tiene privilegios para acceder a esta opcion!. <a asp-action="Index" asp-controller="Home" class="card-link"><i class="fa fa-chevron-left"></i> Volver pagina principal.</a></p>
+            </div>
+        </div>
+    </div>
 
-
-<h2>Tou are not authorized to perform this action!</h2>
+<h2>You are not authorized to perform this action!</h2>
 
 
 @section Scripts {
